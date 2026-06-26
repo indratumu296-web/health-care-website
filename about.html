@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us | Indra Hospital</title>
+
+    <meta name="description"
+        content="Know more about Indra Hospital — our history, mission, vision, experienced doctors, core values, and world-class healthcare services in Hyderabad." />
+
+    <meta name="keywords"
+        content="About Indra Hospital, Healthcare Hyderabad, Multi-specialty Hospital, Doctors, Medical Services, Hospital History" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0A1628;
+            --teal: #00B8A9;
+            --teal-dark: #009688;
+            --white: #FFFFFF;
+            --grey-bg: #F4F7FB;
+            --text: #2C3E50;
+            --muted: #6B7C93;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+
+            /* IMPORTANT: shift content for sidebar */
+            margin-left: 240px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Nunito', sans-serif;
+            color: var(--navy);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ================= LEFT SIDEBAR ================= */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 100vh;
+            background: var(--navy);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .logo span {
+            color: var(--teal);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 12px 0;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 6px;
+            color: rgba(255,255,255,0.7);
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: rgba(0,184,169,0.2);
+            color: white;
+        }
+
+        .sidebar ul li a.active {
+            background: var(--teal);
+            color: white;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            background: linear-gradient(135deg, var(--navy), #112244);
+            padding: 80px 6%;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .hero span {
+            color: var(--teal);
+        }
+
+        .hero p {
+            margin-top: 15px;
+            color: rgba(255,255,255,0.75);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        section {
+            padding: 70px 6%;
+        }
+
+        .section-grey {
+            background: var(--grey-bg);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #05101f;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            body {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+    <div class="sidebar">
+
+        <div class="logo">🏥 Indra <span>Hospital</span></div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <h1>About <span>Indra Hospital</span></h1>
+        <p>
+            Indra Hospital is a leading multi-specialty healthcare institution committed to providing high-quality medical services with compassion, innovation, and excellence. Equipped with modern technology and supported by experienced doctors, nurses, and healthcare professionals, we deliver comprehensive medical care to patients of all ages.
+
+Our hospital offers a wide range of healthcare services including emergency care, diagnostics, surgery, cardiology, orthopedics, pediatrics, gynecology, and preventive health programs. We are dedicated to ensuring patient safety, comfort, and well-being through personalized treatment and round-the-clock medical support.
+
+At Indra Hospital, we believe that quality healthcare should be accessible to everyone. Our mission is to improve lives by delivering trusted, affordable, and patient-centered healthcare services while maintaining the highest standards of medical excellence.
+        </p>
+    </section>
+
+    <!-- INTRO -->
+    <section>
+        <h2>Who We Are</h2>
+        <p>Indra Hospital is a trusted multi-specialty hospital dedicated to providing advanced healthcare services
+             with modern medical technology and expert healthcare professionals. We strive to deliver safe, compassionate, 
+             and effective treatment to every patient while promoting a healthier community.
+</p>
+    </section>
+
+    <!-- MISSION / VISION -->
+    <section class="section-grey">
+        <div class="grid">
+
+            <div class="card">
+                <h3>🎯 Mission</h3>
+                <p>To provide affordable, accessible, and high-quality healthcare services with compassion, integrity, and excellence.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌟 Vision</h3>
+                <p>To become the most trusted and preferred healthcare institution, recognized for exceptional patient care, medical innovation, and community well-being.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section>
+        <h2>Core Values</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>❤️ Compassion</h3>
+                <p> Caring for every patient with empathy and respect.</p>
+            <div class="card"> 
+               <h3> ⭐ Excellence</h3>
+               <p> Prioritizing patient safety, comfort, and satisfaction.</p>
+               <p>Adopting advanced medical technologies and treatment methods.</p>
+               <p>Promoting health awareness and supporting community wellness.</p>
+            <div class="card"> 
+                <h3>🤝 Integrity</h3>
+                <p>Upholding honesty, ethics, and transparency in everything we do.</p>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Indra Hospital. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

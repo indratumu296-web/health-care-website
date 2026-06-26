@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Indra Hospital</title>
+
+    <meta name="description" content="Contact Indra Hospital for appointments, emergency services, and healthcare information.">
+    <meta name="keywords" content="Indra Hospital, Contact, Hospital, Appointment, Emergency, Healthcare">
+
+    <style>
+        /* ══ RESET ═══════════════════════ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(
+                rgba(10, 22, 40, 0.92),
+                rgba(10, 22, 40, 0.92)
+            ),
+            url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* ══ SIDEBAR ═══════════════════════ */
+        .sidebar {
+            width: 220px;
+            background: #0A1628;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #00B8A9;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.8);
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: #00B8A9;
+            color: white;
+        }
+
+        /* ══ MAIN ═══════════════════════ */
+        .main {
+            margin-left: 220px;
+            width: 100%;
+            padding: 30px;
+        }
+
+        /* ══ CARD ═══════════════════════ */
+        .card {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255,255,255,0.97);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h1, h2 {
+            color: #0A1628;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* ══ FORM ═══════════════════════ */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            background: #00B8A9;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #009688;
+        }
+
+        /* ══ EMERGENCY BOX ═══════════════ */
+        .emergency {
+            margin-top: 25px;
+            padding: 15px;
+            background: #ffeded;
+            border-left: 5px solid red;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .emergency h3 {
+            color: red;
+        }
+
+        /* ══ RESPONSIVE ═════════════════ */
+        @media(max-width:768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .main {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">🏥 Indra Hospital</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <div class="card">
+
+            <h1>Contact Indra Hospital</h1>
+
+            <p><strong>Address:</strong> MG Road, Hyderabad, Telangana</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Emergency:</strong> +91 98765 40000</p>
+            <p><strong>Email:</strong> info@indrahospital.com</p>
+            <p><strong>Working Hours:</strong> 24×7</p>
+
+            <h2>Send Us a Message</h2>
+
+            <form onsubmit="return validateContactForm()">
+
+                <label>Full Name</label>
+                <input type="text" required>
+
+                <label>Email</label>
+                <input type="email" required>
+
+                <label>Phone</label>
+                <input type="tel" required>
+
+                <label>Message</label>
+                <textarea rows="5" required></textarea>
+
+                <button class="btn" type="submit">Send Message</button>
+            </form>
+
+            <div class="emergency">
+                <h3>24×7 Emergency</h3>
+                <p>Call immediately: <strong>+91 98765 40000</strong></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
