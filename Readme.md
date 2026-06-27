@@ -7,6 +7,7 @@ This is a beginner-friendly frontend hospital website project built using HTML, 
 
 Healthcare / Hospital Website
 
+---
 
 ## Technologies Used
 
@@ -78,4 +79,7 @@ Healthcare / Hospital Website
 * Database integration (MySQL / Firebase)
 
 
- 
+## Author
+
+**Indra Hospital Web Development Project**
+Built for learning, practice, and academic submission purposes.

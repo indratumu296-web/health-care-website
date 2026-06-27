@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctors | Indra Hospital</title>
+
+    <meta name="description"
+        content="Meet our experienced doctors at Indra Hospital.">
+    <meta name="keywords"
+        content="Doctors, Specialists, Hospital, Indra Hospital">
+
+    <style>
+
+        /* ===== RESET ===== */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            display:flex;
+            min-height:100vh;
+            background:linear-gradient(
+                rgba(10,22,40,0.92),
+                rgba(10,22,40,0.92)
+            ),
+            url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80");
+
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+        }
+
+        /* ===== SIDEBAR ===== */
+
+        .sidebar{
+            width:220px;
+            background:#0A1628;
+            color:white;
+            padding:20px;
+            position:fixed;
+            height:100%;
+        }
+
+        .logo{
+            font-size:22px;
+            font-weight:bold;
+            color:#00B8A9;
+            margin-bottom:30px;
+        }
+
+        .sidebar ul{
+            list-style:none;
+        }
+
+        .sidebar ul li{
+            margin:15px 0;
+        }
+
+        .sidebar ul li a{
+            text-decoration:none;
+            color:rgba(255,255,255,.8);
+            display:block;
+            padding:10px;
+            border-radius:6px;
+            transition:.3s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active{
+            background:#00B8A9;
+            color:white;
+        }
+
+        /* ===== MAIN ===== */
+
+        .main{
+            margin-left:220px;
+            width:100%;
+            padding:40px;
+        }
+
+        h1{
+            color:white;
+            text-align:center;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#ddd;
+            margin-bottom:35px;
+        }
+
+        /* ===== DOCTOR CARDS ===== */
+
+        .doctor-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .doctor-card{
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,.2);
+            transition:.3s;
+        }
+
+        .doctor-card:hover{
+            transform:translateY(-8px);
+        }
+
+        .doctor-card img{
+            width:100%;
+            height:280px;
+            object-fit:cover;
+        }
+
+        .doctor-info{
+            padding:20px;
+        }
+
+        .doctor-info h2{
+            color:#0A1628;
+            margin-bottom:10px;
+        }
+
+        .specialization{
+            color:#00B8A9;
+            font-weight:bold;
+            margin-bottom:15px;
+        }
+
+        .doctor-info p{
+            margin:8px 0;
+            color:#555;
+            line-height:1.5;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 18px;
+            background:#00B8A9;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#009688;
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media(max-width:768px){
+
+            .sidebar{
+                position:relative;
+                width:100%;
+                height:auto;
+            }
+
+            .main{
+                margin-left:0;
+                padding:20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">🏥 Indra Hospital</div>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="doctors.html" class="active">Doctors</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="appointment.html">Appointment</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <h1>Our Experienced Doctors</h1>
+
+        <p class="subtitle">
+            Meet our highly qualified specialists dedicated to providing the best healthcare.
+        </p>
+
+        <div class="doctor-container">
+
+            <!-- Doctor 1 -->
+
+           <div class="doctor-card">
+
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=80">
+
+                <div class="doctor-info">
+
+                    <h2>Dr. T.Indra Reddy</h2>
+
+                    <p class="specialization">ophthalmologist and dentist</p>
+
+                    <p><strong>Qualification:</strong> MBBS, Ms (ophthalmologist), MDS (dentist)</p>
+
+                    <p><strong>Experience:</strong> 15+ Years</p>
+
+                    <p><strong>Availability:</strong> Mon - Sat (10:00 AM - 3:00 PM)</p>
+
+                    <a href="appointment.html" class="btn">Book Appointment</a>
+
+                </div>
+
+            </div>
+
+        
+
+            <div class="doctor-card">
+
+                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&q=80">
+
+                <div class="doctor-info">
+
+                    <h2>Dr. V.Spandana Reddy</h2>
+
+                    <p class="specialization">Neurologist</p>
+
+                    <p><strong>Qualification:</strong> MBBS, DM (Neurology)</p>
+
+                    <p><strong>Experience:</strong> 12+ Years</p>
+
+                    <p><strong>Availability:</strong> Mon - Fri (10:00 AM - 5:00 PM)</p>
+
+                    <a href="appointment.html" class="btn">Book Appointment</a>
+
+                </div>
+
+            </div>
+
+            <!-- Doctor 3 -->
+
+            <div class="doctor-card">
+
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=80">
+
+                <div class="doctor-info">
+
+                    <h2>Dr.M.Priya Sharma</h2>
+
+                    <p class="specialization">Orthopedic Surgeon</p>
+
+                    <p><strong>Qualification:</strong> MBBS, MS (Orthopedics)</p>
+
+                    <p><strong>Experience:</strong> 18+ Years</p>
+
+                    <p><strong>Availability:</strong> Tue - Sat (11:00 AM - 6:00 PM)</p>
+
+                    <a href="appointment.html" class="btn">Book Appointment</a>
+
+                </div>
+
+            </div>
+
+            <!-- Doctor 4 -->
+
+            <div class="doctor-card">
+
+                <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=700&q=80">
+
+                <div class="doctor-info">
+
+                    <h2>Dr. T.Indu Reddy</h2>
+
+                    <p class="specialization">Pediatrician</p>
+
+                    <p><strong>Qualification:</strong> MBBS, MD (Pediatrics)</p>
+
+                    <p><strong>Experience:</strong> 10+ Years</p>
+
+                    <p><strong>Availability:</strong> Mon - Sat (8:00 AM - 2:00 PM)</p>
+
+                    <a href="appointment.html" class="btn">Book Appointment</a>
+
+                </div>
+
+            </div>
+
+            <div class="doctor-card">
+
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=80">
+
+                <div class="doctor-info">
+
+                    <h2>Dr. B.Manisampreeth Reddy </h2>
+
+                    <p class="specialization">Cardiologist</p>
+
+                    <p><strong>Qualification:</strong> MBBS, MD (Cardiology)</p>
+
+                    <p><strong>Experience:</strong> 15+ Years</p>
+
+                    <p><strong>Availability:</strong> Mon - Sat (9:00 AM - 4:00 PM)</p>
+
+                    <a href="appointment.html" class="btn">Book Appointment</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
