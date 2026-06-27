@@ -1,7 +1,5 @@
 
-/* ===========================================
-   Indra Hospital - JavaScript
-=========================================== */
+
 
 /* Welcome Message (shows only once per session) */
 window.addEventListener("load", function () {
@@ -16,9 +14,7 @@ window.addEventListener("load", function () {
 });
 
 
-/* ===========================================
-   Contact Form Validation
-=========================================== */
+ 
 
 function validateContactForm() {
 
@@ -65,13 +61,10 @@ function validateContactForm() {
 
     alert("Thank you! Your message has been sent successfully.");
 
-    return false; // Prevents actual submission for demo purposes
+    return false;  
 }
 
-
-/* ===========================================
-   Appointment Form Validation
-=========================================== */
+ 
 
 function validateAppointmentForm() {
 
@@ -124,14 +117,11 @@ function validateAppointmentForm() {
 
     alert("Appointment booked successfully!");
 
-    return false; // Prevents actual submission for demo purposes
+    return false; 
 }
 
 
-/* ===========================================
-   Smooth Scrolling
-=========================================== */
-
+ 
 document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
     link.addEventListener("click", function(e){

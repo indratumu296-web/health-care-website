@@ -82,4 +82,4 @@ Healthcare / Hospital Website
 ## Author
 
 **Indra Hospital Web Development Project**
-Built for learning, practice, and academic submission purposes.
+Built for learning and practice.

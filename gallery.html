@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <style>
-        /* ══ RESET & TOKENS ══════════════════════════════ */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
             --navy:        #0A1628;
@@ -53,8 +52,7 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* ══ TOP HEADER ═════════════════════════════════ */
-        .topbar {
+         .topbar {
             position: fixed;
             top: 0; left: 0; right: 0;
             height: var(--top-h);
@@ -79,7 +77,7 @@
 
         .topbar-logo span { color: var(--teal); }
 
-        /* Hamburger */
+       
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -102,8 +100,7 @@
         .menu-toggle.open span:nth-child(2) { opacity: 0; }
         .menu-toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-        /* ══ VERTICAL SIDEBAR ════════════════════════════ */
-        .sidebar {
+         .sidebar {
             position: fixed;
             top: var(--top-h);
             left: 0;
@@ -214,8 +211,7 @@
             50%      { opacity: 0.2; }
         }
 
-        /* Mobile overlay */
-        .overlay {
+         .overlay {
             display: none;
             position: fixed;
             inset: 0;
@@ -225,8 +221,7 @@
 
         .overlay.show { display: block; }
 
-        /* ══ MAIN CONTENT ════════════════════════════════ */
-        .main {
+         .main {
             margin-left: var(--nav-w);
             margin-top: var(--top-h);
             min-height: calc(100vh - var(--top-h));
@@ -253,8 +248,7 @@
             border-radius: 2px;
         }
 
-        /* Page Hero */
-        .page-hero {
+         .page-hero {
             background: linear-gradient(135deg, var(--navy) 0%, #112244 60%, #0d3060 100%);
             padding: 52px 48px 48px;
             position: relative;
@@ -285,8 +279,7 @@
             line-height: 1.75;
         }
 
-        /* Filter bar */
-        .filter-bar {
+         .filter-bar {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
@@ -344,8 +337,7 @@
             transform: translateY(-4px);
         }
 
-        /* Image area — emoji placeholder until real images added */
-        .gallery-img {
+         .gallery-img {
             width: 100%;
             aspect-ratio: 4 / 3;
             background: linear-gradient(135deg, #d0f5f2 0%, #a7e9e4 100%);
@@ -358,8 +350,7 @@
             transition: transform 0.3s ease;
         }
 
-        /* If a real <img> is present inside .gallery-img */
-        .gallery-img img {
+         .gallery-img img {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -369,8 +360,7 @@
 
         .gallery-card:hover .gallery-img { transform: scale(1.04); }
 
-        /* Hover overlay */
-        .gallery-overlay {
+         .gallery-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to top, rgba(10,22,40,0.82) 0%, transparent 55%);
@@ -390,8 +380,7 @@
             font-weight: 700;
         }
 
-        /* Category tag */
-        .gallery-tag {
+         .gallery-tag {
             position: absolute;
             top: 12px; left: 12px;
             background: rgba(10,22,40,0.65);
@@ -405,8 +394,7 @@
             backdrop-filter: blur(4px);
         }
 
-        /* Card label */
-        .gallery-label {
+         .gallery-label {
             padding: 14px 16px;
             display: flex;
             align-items: center;
@@ -416,8 +404,7 @@
         .gallery-label h3 { font-size: 0.97rem; }
         .gallery-label .lbl-icon { font-size: 1.15rem; flex-shrink: 0; }
 
-        /* ── Facilities Section ── */
-        .facilities-grid {
+         .facilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
             gap: 18px;
@@ -449,8 +436,7 @@
         .facility-card h3 { font-size: 0.97rem; margin-bottom: 5px; }
         .facility-card p  { font-size: 0.84rem; color: var(--muted); line-height: 1.6; }
 
-        /* ── Lightbox ── */
-        .lightbox {
+         .lightbox {
             display: none;
             position: fixed;
             inset: 0;
@@ -545,8 +531,7 @@
 
         .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.18); }
 
-        /* Photo count badge */
-        .photo-count {
+         .photo-count {
             text-align: center;
             font-size: 0.88rem;
             color: var(--muted);
@@ -554,8 +539,7 @@
             margin-bottom: 36px;
         }
 
-        /* Footer */
-        footer {
+         footer {
             background: var(--navy);
             text-align: center;
             padding: 20px 5%;
@@ -563,8 +547,7 @@
             color: rgba(255,255,255,0.35);
         }
 
-        /* ══ RESPONSIVE ══════════════════════════════════ */
-        @media (max-width: 768px) {
+         @media (max-width: 768px) {
             .sidebar { transform: translateX(-100%); }
             .sidebar.open { transform: translateX(0); }
             .menu-toggle { display: flex; }
@@ -586,8 +569,7 @@
 
 <body>
 
-    <!-- ══ TOP HEADER ════════════════════════════════ -->
-    <header class="topbar">
+     <header class="topbar">
         <div class="topbar-logo">🏥 Indra <span>Hospital</span></div>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -595,7 +577,7 @@
     </header>
 
 
-    <!-- ══ VERTICAL SIDEBAR NAV ══════════════════════ -->
+    
     <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
 
         <p class="sidebar-section-label">Navigation</p>
@@ -641,11 +623,9 @@
     <div class="overlay" id="overlay" aria-hidden="true"></div>
 
 
-    <!-- ══ MAIN CONTENT ═══════════════════════════════ -->
-    <main class="main">
+     <main class="main">
 
-        <!-- Page Hero -->
-        <div class="page-hero">
+         <div class="page-hero">
             <div class="page-hero-inner">
                 <p class="eyebrow">Photo Gallery</p>
                 <h1>Hospital <span>Gallery</span></h1>
@@ -656,8 +636,7 @@
             </div>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="filter-bar" role="group" aria-label="Gallery category filters">
+         <div class="filter-bar" role="group" aria-label="Gallery category filters">
             <button class="filter-btn active" data-filter="all">All Photos</button>
             <button class="filter-btn" data-filter="facility">Facilities</button>
             <button class="filter-btn" data-filter="team">Our Team</button>
@@ -668,8 +647,7 @@
 
         <div class="content">
 
-            <!-- ── Photo Gallery ── -->
-            <div class="sec-head">
+             <div class="sec-head">
                 <p class="eyebrow">Our Facilities</p>
                 <h2>A Tour of Indra Hospital</h2>
                 <p>Click any photo to view it in full. Each image has a descriptive alt text for accessibility.</p>
@@ -686,8 +664,7 @@
                     <div class="gallery-img" aria-hidden="true">
                         <span class="gallery-tag">Facility</span>
                         🏥
-                        <!-- Replace emoji with real image: <img src="images/hospital.jpg" alt="Indra Hospital Building front view"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Hospital Building</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Hospital Building</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🏥</span>
@@ -695,8 +672,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="facility"
                      data-title="Reception Area"
                      data-desc="Our spacious, air-conditioned reception with 24/7 patient assistance and enquiry desk."
@@ -704,8 +680,7 @@
                     <div class="gallery-img" aria-hidden="true">
                         <span class="gallery-tag">Facility</span>
                         🛎️
-                        <!-- <img src="images/reception.jpg" alt="Hospital reception area with patient assistance desk"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Reception Area</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Reception Area</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🛎️</span>
@@ -713,8 +688,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="team"
                      data-title="Expert Doctors Team"
                      data-desc="Our panel of 50+ experienced specialist doctors — ready to serve patients across all departments."
@@ -722,8 +696,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#dceefb,#b3d4f5);" aria-hidden="true">
                         <span class="gallery-tag">Team</span>
                         👨‍⚕️
-                        <!-- <img src="images/doctor1.jpg" alt="Indra Hospital team of specialist doctors"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Expert Doctors</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Expert Doctors</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">👨‍⚕️</span>
@@ -731,8 +704,7 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="wards"
                      data-title="ICU Department"
                      data-desc="Our Intensive Care Unit with 1:1 nurse-to-patient monitoring and advanced life-support systems."
@@ -740,8 +712,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#fde8e8,#f5b3b3);" aria-hidden="true">
                         <span class="gallery-tag">Wards &amp; ICU</span>
                         🫀
-                        <!-- <img src="images/icu.jpg" alt="ICU department with monitoring equipment"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">ICU Department</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">ICU Department</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🫀</span>
@@ -749,8 +720,7 @@
                     </div>
                 </div>
 
-                <!-- Card 5 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="ot"
                      data-title="Operation Theatre"
                      data-desc="One of our 8 laminar-flow operation theatres — fully equipped for laparoscopic and open surgeries."
@@ -758,8 +728,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#e8f5e9,#a5d6a7);" aria-hidden="true">
                         <span class="gallery-tag">OT</span>
                         🔪
-                        <!-- <img src="images/operation.jpg" alt="Indra Hospital operation theatre with surgical equipment"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Operation Theatre</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Operation Theatre</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🔪</span>
@@ -767,8 +736,7 @@
                     </div>
                 </div>
 
-                <!-- Card 6 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="facility"
                      data-title="24×7 Ambulance"
                      data-desc="Our fleet of well-equipped ambulances providing rapid emergency response across Hyderabad."
@@ -776,8 +744,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#fff3e0,#ffcc80);" aria-hidden="true">
                         <span class="gallery-tag">Facility</span>
                         🚑
-                        <!-- <img src="images/ambulance.jpg" alt="Indra Hospital emergency ambulance van"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">24×7 Ambulance</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">24×7 Ambulance</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🚑</span>
@@ -785,8 +752,7 @@
                     </div>
                 </div>
 
-                <!-- Card 7 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="equipment"
                      data-title="Modern Laboratory"
                      data-desc="Our NABL-certified pathology lab processes 1,200+ tests daily with same-day results."
@@ -794,8 +760,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#f3e5f5,#ce93d8);" aria-hidden="true">
                         <span class="gallery-tag">Equipment</span>
                         🔬
-                        <!-- <img src="images/laboratory.jpg" alt="Modern laboratory with diagnostic equipment"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Modern Laboratory</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Modern Laboratory</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🔬</span>
@@ -803,8 +768,7 @@
                     </div>
                 </div>
 
-                <!-- Card 8 -->
-                <div class="gallery-card"
+                 <div class="gallery-card"
                      data-category="facility"
                      data-title="24×7 Pharmacy"
                      data-desc="Our fully stocked in-house pharmacy with genuine medicines, generics, and insurance billing support."
@@ -812,8 +776,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#e8eaf6,#9fa8da);" aria-hidden="true">
                         <span class="gallery-tag">Facility</span>
                         💊
-                        <!-- <img src="images/pharmacy.jpg" alt="Indra Hospital pharmacy with medicine shelves"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">24×7 Pharmacy</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">24×7 Pharmacy</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">💊</span>
@@ -830,8 +793,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#e0f7fa,#80deea);" aria-hidden="true">
                         <span class="gallery-tag">Equipment</span>
                         🔭
-                        <!-- <img src="images/mri.jpg" alt="MRI scanning room at Indra Hospital"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">MRI Scanning Room</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">MRI Scanning Room</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🔭</span>
@@ -848,8 +810,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#fce4ec,#f48fb1);" aria-hidden="true">
                         <span class="gallery-tag">Team</span>
                         👩‍⚕️
-                        <!-- <img src="images/nurses.jpg" alt="Indra Hospital nursing staff on duty"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Nursing Staff</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Nursing Staff</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">👩‍⚕️</span>
@@ -866,8 +827,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#f9fbe7,#c5e1a5);" aria-hidden="true">
                         <span class="gallery-tag">Wards</span>
                         🛏️
-                        <!-- <img src="images/room.jpg" alt="Clean and comfortable patient room at Indra Hospital"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Patient Rooms</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Patient Rooms</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🛏️</span>
@@ -884,8 +844,7 @@
                     <div class="gallery-img" style="background: linear-gradient(135deg,#ffebee,#ef9a9a);" aria-hidden="true">
                         <span class="gallery-tag">Facility</span>
                         🩸
-                        <!-- <img src="images/bloodbank.jpg" alt="Blood bank storage facility at Indra Hospital"> -->
-                        <div class="gallery-overlay"><div class="overlay-caption">Blood Bank</div></div>
+                         <div class="gallery-overlay"><div class="overlay-caption">Blood Bank</div></div>
                     </div>
                     <div class="gallery-label">
                         <span class="lbl-icon">🩸</span>
@@ -900,8 +859,7 @@
             </p>
 
 
-            <!-- ── Advanced Facilities ── -->
-            <div class="sec-head">
+             <div class="sec-head">
                 <p class="eyebrow">Infrastructure</p>
                 <h2>Our Advanced Facilities</h2>
                 <p>State-of-the-art medical infrastructure designed for accurate diagnosis and faster recovery.</p>
@@ -939,8 +897,7 @@
             </div>
 
 
-            <!-- ── Appointment CTA ── -->
-            <div class="appt-strip">
+             <div class="appt-strip">
                 <div>
                     <h2>Need Medical Assistance?</h2>
                     <p>Book your appointment today and receive quality healthcare from our experienced specialists.</p>
@@ -950,7 +907,7 @@
 
         </div><!-- /content -->
 
-        <!-- Footer -->
+         
         <footer>
             <p>© 2026 Indra Hospital. All Rights Reserved. | Designed for MANTRA 2026 Summer School</p>
         </footer>
@@ -958,8 +915,7 @@
     </main>
 
 
-    <!-- ══ LIGHTBOX ══════════════════════════════════ -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
         <div class="lb-card">
             <div class="lb-img" id="lbImg" aria-hidden="true"></div>
             <div class="lb-body">
@@ -971,8 +927,7 @@
     </div>
 
 
-    <!-- ══ JAVASCRIPT ════════════════════════════════ -->
-    <script>
+     <script>
         /* ── Sidebar toggle ── */
         const toggle  = document.getElementById('menuToggle');
         const sidebar = document.getElementById('sidebar');
@@ -1007,8 +962,7 @@
         document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeSidebar(); } });
 
 
-        /* ── Gallery Filter ── */
-        const filterBtns   = document.querySelectorAll('.filter-btn');
+         const filterBtns   = document.querySelectorAll('.filter-btn');
         const galleryCards = document.querySelectorAll('.gallery-card');
         const countEl      = document.getElementById('visibleCount');
 
@@ -1034,7 +988,7 @@
         });
 
 
-        /* ── Lightbox ── */
+       
         function openLightbox(card) {
             const lb = document.getElementById('lightbox');
             const emoji = card.querySelector('.gallery-img').textContent.trim().charAt(0);
