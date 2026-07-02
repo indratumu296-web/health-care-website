@@ -350,7 +350,7 @@ form button:hover{
 
 .emergency h2{
 
-    color:#d62828;
+    color:#d31111;
 
 }
 
@@ -362,6 +362,14 @@ footer{
     text-align:center;
     padding:20px;
 
+}
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#00B8A9;
 }
 
 @media(max-width:768px){
